@@ -15,6 +15,26 @@ html {
   font-size: 62.5%;
   font-family: "DM Sans", sans-serif;
 }
+:root {
+  /* colores */
+  --dark-back: rgba(32, 33, 36, 1);
+  --color-font: white;
+  --color-border: #5f6368;
+  --color-shadow: #171717;
+  --color-button: #303134;
+  --color-footer-font: #9aa0a6;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
 
 body {
   background-color: var(--dark-back);
@@ -55,7 +75,7 @@ header nav .nav-right-section a {
 }
 
 nav .nav-right-section .menu-icon {
-  background-image: url("/assets/icons8-menú-en-círculos-24.png");
+  background-image: url("../assets/apps_black_24dp.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -93,7 +113,7 @@ main .main-input {
 main .main-input-container {
   width: 582px;
   border-radius: 100px;
-  border: solid 1px #5f6368;
+  border: solid 1px var(--color-border);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -110,8 +130,8 @@ main .main-input input {
 }
 
 main .main-input-container:hover {
-  background-color: #303134;
-  box-shadow: 0 1px 6px 0 #171717;
+  background-color: var(--color-button);
+  box-shadow: 0 1px 6px 0 var(--color-shadow);
   border-color: rgba(223, 225, 229, 0);
 }
 
@@ -145,10 +165,10 @@ main .main-botton div {
 
 main .main-botton button {
   height: 34px;
-  background-color: #303134;
+  background-color: var(--color-button);
   color: #e8eaed;
   font-size: 1.4rem;
-  border: 1px solid #303134;
+  border: 1px solid var(--color-button);
   border-radius: 4px;
   padding: 0 16px;
   margin-right: 8px;
@@ -156,7 +176,7 @@ main .main-botton button {
 }
 
 main .main-botton button:hover {
-  border: 1px solid #5f6368;
+  border: 1px solid var(--color-border);
   box-shadow: 0 1px 3px rgb(23, 23, 23 / 24%);
 }
 
@@ -178,14 +198,14 @@ footer {
   grid-template-areas:
     "pais pais"
     "link-left link-right";
-  background-color: #171717;
-  color: #9aa0a6;
+  background-color: var(--color-shadow);
+  color: var(--color-footer-font);
   align-items: center;
   font-size: 1.5rem;
 }
 
 footer a {
-  color: #9aa0a6;
+  color: var(--color-footer-font);
 }
 
 footer .footer-pais {
