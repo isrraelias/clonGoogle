@@ -1,0 +1,224 @@
+:root {
+  /* colores */
+  --dark-back: rgba(32, 33, 36, 1);
+  --color-font: white;
+  /* #e2e2e3 */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: var(--dark-back);
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  height: inherit;
+}
+
+header nav .nav-right-section {
+  width: 250px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .nav-right-section a {
+  margin-right: 10px;
+  color: var(--color-font);
+}
+
+nav .nav-right-section .menu-icon {
+  background-image: url("/assets/icons8-menú-en-círculos-24.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 22px;
+  height: 22px;
+}
+
+nav .nav-right-section img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+main {
+  margin-top: 10px;
+  text-align: center;
+}
+
+main .main-logo {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+
+main .main-logo img {
+  width: 492px;
+  height: 197px;
+}
+
+main .main-input {
+  width: 582px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+main .main-input-container {
+  width: 582px;
+  border-radius: 100px;
+  border: solid 1px #5f6368;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .main-input input {
+  width: 450px;
+  height: 44px;
+  border: none;
+  outline: none; /*quita el borde que aparece al seleccionar el input*/
+  background-color: transparent; /*con el atributo transparent evitamos conflictos como con el hover*/
+  color: var(--color-font);
+  font-size: 1.6rem;
+}
+
+main .main-input-container:hover {
+  background-color: #303134;
+  box-shadow: 0 1px 6px 0 #171717;
+  border-color: rgba(223, 225, 229, 0);
+}
+
+main .main-input .search-icon {
+  width: 18px;
+  height: 18px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+main .main-input .micro-icon {
+  width: 18px;
+  height: 18px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer; /*la forma del puntero*/
+}
+
+main .main-botton {
+  width: 582px;
+  margin: 0 auto;
+}
+
+main .main-botton div {
+  display: inline-block;
+}
+
+main .main-botton button {
+  height: 34px;
+  background-color: #303134;
+  color: #e8eaed;
+  font-size: 1.4rem;
+  border: 1px solid #303134;
+  border-radius: 4px;
+  padding: 0 16px;
+  margin-right: 8px;
+  margin-bottom: 25px;
+}
+
+main .main-botton button:hover {
+  border: 1px solid #5f6368;
+  box-shadow: 0 1px 3px rgb(23, 23, 23 / 24%);
+}
+
+main .main-botton p {
+  color: #bdc1c6;
+}
+main .main-botton a {
+  color: #8ab4f8;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "pais pais"
+    "link-left link-right";
+  background-color: #171717;
+  color: #9aa0a6;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+footer a {
+  color: #9aa0a6;
+}
+
+footer .footer-pais {
+  grid-area: pais;
+  height: 50px;
+  border-bottom: 1px solid #212327;
+  display: flex;
+  align-items: center;
+  /* margin-left: 30px; */
+}
+
+footer .footer-links {
+  list-style: none;
+  display: flex;
+  height: 50px;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+footer .footer-links-left {
+  grid-area: link-left;
+}
+
+footer .footer-links-right {
+  grid-area: link-right;
+  justify-content: flex-end;
+}
+
+footer .footer-links-left > li,
+p {
+  margin-left: 30px;
+}
+
+footer .footer-links-right > li {
+  margin-right: 30px;
+}
